@@ -1,0 +1,38 @@
+{
+  "name": "rjsf-tabs",
+  "description": "Extension of react-jsonschema-form with support for multi-nav forms",
+  "private": false,
+  "author": "contact@csselectronics.com",
+  "version": "0.0.1",
+  "scripts": {
+    "dist": "npm run build:lib && npm run build:dist",
+    "lint": "eslint src test playground --fix",
+    "precommit": "lint-staged",
+    "publish-to-npm": "npm run dist &&  npm publish && npm version patch",
+    "start": "webpack-dev-server",
+    "tdd": "jest --watchAll",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ]
+  },
+  "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
+  "engineStrict": false,
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "react",
+    "form",
+    "json-schema",
+    "conditional",
+    "predicate"
+  ]
+}
